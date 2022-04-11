@@ -1,4 +1,4 @@
-## 📝 My task list
+## 📝 My to-do list
 
 A Pen created on CodePen.io. Original URL: [https://codepen.io/jguarato/full/QWamWVY](https://codepen.io/jguarato/full/QWamWVY).
 
