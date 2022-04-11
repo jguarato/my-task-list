@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - My task list</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+  </head>
+
+  <body>
+
+    <div class="list-wrapper">
+
+      <header>
+        <input type="text" id="listName" placeholder="My task list">
+        <h4 id="tasksNumber"><br></h4>
+      </header>
+
+      <div class="list-content" id="listContent">
+      </div>
+      
+      <div class="list-content" id="completedListContent">
+      </div>
+
+    </div>
+
+    <div class="list-add">
+
+      <div id="circleButton">
+        <button id="addButton" onclick="addTask()">+</button>
+      </div>
+
+      <div class="input-add">
+        <input type="text" id="newTask" placeholder="New task">
+        <button id="saveButton" onclick="saveTask()">Save</button>
+      </div>
+
+    </div>
+    
+    <footer>
+      made by <a class="name-light" id="myName" href="https://codepen.io/jguarato">jguarato</a> 🐞
+    </footer>
+
+
+  </body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
