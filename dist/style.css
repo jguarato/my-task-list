@@ -1,39 +1,34 @@
-body {
-  width: 100%;
-  min-height: 94.5vh;
-  position: relative;
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css");
+
+* {
   margin: 0;
   padding: 0;
-  background-color: #f1f3f4;
-  font-family: Poppins;
 }
 
-body::after {
-  content: "";
-  display: block;
-  min-height: 50px;
+html,
+body {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f1f3f4;
 }
 
 .list-wrapper {
-  width: 80%;
-  min-width: 400px;
-  max-width: 500px;
-  min-height: 300px;
-  display: block;
-  margin-top: 50px;
-  margin-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-  border-radius: 20px;
+  width: 80vmin;
+  min-height: 60vmin;
+  margin: 6vmin;
+  margin-bottom: 15vmin;
+  border-radius: 3vmin;
   background-color: white;
-  box-shadow: 0px 0px 22px -2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 4vmin -.5vmin rgba(0,0,0,0.5);
 }
 
 header {
-  padding: 20px 0 20px 0;
+  padding: 4vmin 0 4vmin 0;
   background-color: #788B84;
-  border-radius: 20px 20px 50% 50%;
+  border-radius: 3vmin 3vmin 50% 50%;
   text-align: center;
   color: white;
 }
@@ -42,9 +37,7 @@ header {
   margin: 0;
   border: none;
   background-color: transparent;
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 500;
+  font: 500 3vmin "Poppins";
   color: white;
   text-align: center;
 }
@@ -63,13 +56,12 @@ textarea::-webkit-input-placeholder {
 
 #tasksNumber {
   margin: 0;
-  font-weight: 400;
+  font: 400 2.8vmin "Poppins";
 }
 
 .list-content {
-  margin: 20px;
-  font-weight: 300;
-  font-size: 16px;
+  margin: 4vmin;
+  font: 300 2.6vmin "Poppins";
 }
 
 #completedListContent {
@@ -77,8 +69,7 @@ textarea::-webkit-input-placeholder {
 }
 
 #completedListContent h4 {
-  margin: 10px;
-  margin-left: 0;
+  margin: 2vmin 0;
   font-weight: 500;
 }
 
@@ -90,9 +81,8 @@ textarea::-webkit-input-placeholder {
 .list-item {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
+  padding-left: 4.5vmin;
+  margin-bottom: 2vmin;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -101,17 +91,16 @@ textarea::-webkit-input-placeholder {
 .list-item input {
   position: absolute;
   opacity: 0;
-  cursor: pointer;
   height: 0;
   width: 0;
 }
 .checkmark {
   position: absolute;
-  top: 2px;
+  top: .4vmin;
   left: 0;
-  height: 21px;
-  width: 21px;
-  border-radius: 5px;
+  height: 3vmin;
+  width: 3vmin;
+  border-radius: .6vmin;
   background-color: #eee;
 }
 .list-item input:checked ~ .checkmark {
@@ -119,22 +108,24 @@ textarea::-webkit-input-placeholder {
 }
 .checkmark:hover {
   background-color: #ccc;
+  cursor: pointer;
 }
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
+
 .list-item input:checked ~ .checkmark:after {
   display: block;
 }
 .list-item .checkmark:after {
-  left: 7px;
-  top: 4px;
-  width: 4px;
-  height: 8px;
+  left: 1vmin;
+  top: .4vmin;
+  width: .6vmin;
+  height: 1.2vmin;
   border: solid white;
-  border-width: 0 3px 3px 0;
+  border-width: 0 .4vmin .4vmin 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -144,67 +135,64 @@ textarea::-webkit-input-placeholder {
   color: #C70039;
 }
 
-.list-add {
-  width: 80%;
-  min-width: 400px;
-  max-width: 700px;
-  min-height: 50px;
-  position: absolute;
+.menu-add {
+  position: fixed;
   bottom: 0;
-  left: calc(-50vw + 50%);
-  right: calc(-50vw + 50%);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0px 15px 22px 2px rgba(0,0,0,0.5);
+  padding: 3vmin;
+  padding-top: 0;
+  width: 65vmin;
+  height: 6vmin;
+  border-radius: 3vmin 3vmin 0 0;
+  box-shadow: 0 1vmin 3vmin .1vmin rgba(0,0,0,0.5);
   background-color: white;
+  transition: height .5s linear;
+}
+
+.menu-add-extended {
+  height: 16vmin;
 }
 
 #circleButton {
-  width: 50px;
-  height: 25px;
+  width: 8vmin;
+  height: 4vmin;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px;
-  border-radius: 0 0 150px 150px;
-  box-shadow: 0px -5px 9px -2px rgba(0,0,0,0.5) inset;
+  padding: .75vmin;
+  border-radius: 0 0 24vmin 24vmin;
+  box-shadow: inset 0 -3vmin 3vmin -1vmin rgba(48, 51, 55, 0.5);
   background-color: #f1f3f4;
 }
 
 #addButton {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3px;
-  border: 0.5px solid white;
+  width: 8vmin;
+  height: 8vmin;
+  border: .1vmin solid white;
   border-radius: 50%;
-  box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.5);
+  box-shadow: 0 0vmin 2vmin .4vmin rgba(0,0,0,0.3);
   background-color: white;
   transform: translatey(-50%);
   color: #788B84;
-  font-size: 40px;
-  font-weight: bolder;
+  font: 600 6.5vmin "Poppins";
+}
+
+#addButton p {
+  transform: translatey(-1vmin);
 }
 
 #addButton:hover {
   cursor: pointer;
-  border: 0.5px solid #788B84;
+  border-color: #788B84;
   background-color: #788B84;
   color: white;
-  box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.5) inset;
+  box-shadow: inset 0 0 2vmin 0 rgba(0,0,0,0.4);
 }
 
 #newTask {
-  width: calc(100% - 55px);
-  margin: 25px;
-  margin-bottom: 20px;
-  padding: 5px;
+  width: 93%;
+  margin: 1vmin;
+  margin-top: 3vmin;
+  padding: 1vmin;
   border: none;
-  font-size: 14px;
-  font-family: Poppins;
 }
 
 #newTask:focus {
@@ -213,10 +201,9 @@ textarea::-webkit-input-placeholder {
 
 #newTask,
 textarea {
-  font-size: 14px;
-  padding: 2px;
+  font: 400 2.5vmin "Poppins";
   color: #788B84;
-  text-shadow: 0px 0px 0px #000;
+  text-shadow: 0 0 0 #000;
   -webkit-text-fill-color: transparent;
 }
 #newTask::-webkit-input-placeholder,
@@ -227,30 +214,26 @@ textarea::-webkit-input-placeholder {
 }
 
 #saveButton {
-  margin-left: calc(100% - 70px);
-  margin-bottom: 20px;
-  padding: 8px;
-  border: 1px solid #788B84;
-  border-radius: 20px;
+  float: right;
+  padding: 1vmin;
+  border: .1vmin solid #788B84;
+  border-radius: 3vmin;
   background-color: #788B84;
   color: white;
-  font-size: 12px;
-  font-family: Poppins;
-  font-weight: 500;
+  font: 500 2vmin "Poppins";
 }
 
 #saveButton:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.5) inset;
+  box-shadow: 0 0 .5vmin -.2vmin rgba(0,0,0,0.5) inset;
 }
 
-footer {
-  top: 0px;
-  right: 0px;
+.creation {
   position: fixed;
-  padding: 10px;
-  font-family: Poppins;
-  font-weight: 600;
+  top: 0;
+  right: 0;
+  padding: 1vmin;
+  font: 600 2vmin "Poppins";
   color: #1C1C1E;
   text-align: right;
 }
